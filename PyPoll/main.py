@@ -43,10 +43,10 @@ for ti in total_indv:
 #the code will create a dictionary with the results from the previous steps
 results={'Candidate':candidates_set,'Percentage':percentages ,'Total':total_indv}
 
-#to determine the winner the code will use the 'max' function over the list 'Percentage' contained in the dictionary 'results' to get the index of this value
-#we could also apply the 'max' function to the 'Total'
-#Then with that index the code will read the name of the winner in the 'Candidate' list
-winner_index = results["Percentage"].index(max(results["Percentage"]))
+#to determine the winner the code will use the 'max' function over the list 'Total' contained in the dictionary 'results' to get the index of this value
+#then with that index the code will read the name of the winner in the 'Candidate' list
+#we should not apply the 'max' function to the 'Percentage' list because the data type is string because we applied the format when appending the list
+winner_index = results["Total"].index(max(results["Total"]))
 winner=results["Candidate"][winner_index]
 
 lines1=[
